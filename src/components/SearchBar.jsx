@@ -13,8 +13,8 @@ export default function SearchBar({onSearch}) {
   const [suggestiones, setSuggestiones] = useState([])
 
   useEffect(()=>{
-    const loadNames = async () => {
-      const response = await axios.get('http://localhost:8080/')
+    const loadNames = async () => {                                                     //BUSCADOR EN TIEMPO REAL
+      const response = await axios.get('https://infinite-shelf-73106.herokuapp.com/') //Ciudades en express, ya que api no otorga json con LISTA de citys..
       //console.log(response.data.map(el=>el.name))
       setNames(response.data)
     }
